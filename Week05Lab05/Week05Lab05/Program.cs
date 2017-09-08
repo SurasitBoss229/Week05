@@ -1,28 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Week05Lab05
+namespace ConsoleApp2
 {
-    class Program
+    class Switch
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Line 1");
-            Console.WriteLine("Line 2");
-            Console.WriteLine("Line 3");
-            line4:
-            Console.WriteLine("Line 4");
-            Console.WriteLine("Line 5");
-            Console.WriteLine("Line 6");
-            goto line10;
-            Console.WriteLine("Line 7");
-            Console.WriteLine("Line 8");
-            Console.WriteLine("Line 9");
-            line10:
-            Console.WriteLine("Line 10");
+            Console.Write("Enter your selection (1, 2, or 3): ");
+            string s = Console.ReadLine();
+            int n = Int32.Parse(s);
+
+            switch (n)
+            {
+                case 1:
+                    Console.WriteLine("Current value is {0}", 1);
+                    break;
+                case 2:
+                    Console.WriteLine("Current value is {0}", 2);
+                    break;
+                case 3:
+                    Console.WriteLine("Current value is {0}", 3);
+                    break;
+                default:
+                    Console.WriteLine("Sorry, invalid selection.");
+                    break;
+            }
+
+            // Keep the console open in debug mode.
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
         }
     }
 }
