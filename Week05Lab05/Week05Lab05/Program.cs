@@ -1,28 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Week05Lab05
+namespace ConsoleApp2
 {
-    class Program
+    class WhileTest
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Line 1");
-            Console.WriteLine("Line 2");
-            Console.WriteLine("Line 3");
-            line4:
-            Console.WriteLine("Line 4");
-            Console.WriteLine("Line 5");
-            Console.WriteLine("Line 6");
-            goto line10;
-            Console.WriteLine("Line 7");
-            Console.WriteLine("Line 8");
-            Console.WriteLine("Line 9");
-            line10:
-            Console.WriteLine("Line 10");
+            int n = 1;
+            while (n < 6)
+            {
+                Console.WriteLine("Current value of n is {0}", n);
+                n++;
+            }
         }
     }
 }
