@@ -1,28 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Week05Lab05
+public class TryCatch
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Line 1");
-            Console.WriteLine("Line 2");
-            Console.WriteLine("Line 3");
-            line4:
-            Console.WriteLine("Line 4");
-            Console.WriteLine("Line 5");
-            Console.WriteLine("Line 6");
-            goto line10;
-            Console.WriteLine("Line 7");
-            Console.WriteLine("Line 8");
-            Console.WriteLine("Line 9");
-            line10:
-            Console.WriteLine("Line 10");
-        }
+            try
+            {
+                int value = 800000000;
+                checked // check for overflow
+                {
+                    int square = value * value;
+                    Console.WriteLine("{0} ^ 2 = {1}", value, square);
+                }
+            }
+            catch (OverflowException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine(e.Message);
+            }
     }
 }
+
